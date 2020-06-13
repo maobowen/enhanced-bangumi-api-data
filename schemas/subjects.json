@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$comment": "JSON Schema for subjects table",
+  "$id": "subjects",
+  "title": "subjects",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "name_jp": {
+      "type": "string",
+      "minLength": 0
+    },
+    "name_cn": {
+      "type": "string",
+      "minLength": 0
+    },
+    "name_en": {
+      "type": "string",
+      "minLength": 0
+    },
+    "mal_id": {
+      "type": "string",
+      "minLength": 0,
+      "pattern": "^\\d+$"
+    },
+    "website": {
+      "type": "string",
+      "minLength": 0,
+      "pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?"
+    },
+    "on_air_date": {
+      "type": "string",
+      "minLength": 0,
+      "pattern": "^\\d{4}-([0][1-9]|1[0-2])-([0][1-9]|[1-2]\\d|3[01]) ([0-1]\\d|2[0-3]):[0-5]\\d:[0-5]\\d([+-][0-1]\\d)$"
+    },
+    "bgm_image_url": {
+      "type": "string",
+      "minLength": 0,
+      "pattern": "^[0-9a-f]{2}\/[0-9a-f]{2}\/\\d+_[0-9A-Za-z]{5}$"
+    }
+  },
+  "required": [
+    "id"
+  ]
+}

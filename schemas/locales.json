@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$comment": "JSON Schema for locales table",
+  "$id": "locales",
+  "title": "locales",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 5,
+      "pattern": "^[a-z]{2}_[A-Z]{2}$"
+    },
+    "label": {
+      "type": "string",
+      "minLength": 0
+    }
+  },
+  "required": [
+    "id",
+    "label"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$comment": "JSON Schema for services table",
+  "$id": "services",
+  "title": "services",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "localized_name": {
+      "type": "string"
+    },
+    "authorized": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "subject_url_format": {
+      "type": "string",
+      "minLength": 0,
+      "pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?"
+    },
+    "episode_url_format": {
+      "type": "string",
+      "minLength": 0,
+      "pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?"
+    },
+    "video_url_format": {
+      "type": "string",
+      "minLength": 0,
+      "pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?"
+    }
+  },
+  "required": [
+    "id",
+    "localized_name",
+    "authorized"
+  ]
+}
