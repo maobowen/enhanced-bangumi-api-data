@@ -1,0 +1,7 @@
+name: "CSV Validation on Ubuntu 20.04"
+language: generic
+dist: focal
+install:
+  - npm i -g csval
+script:
+  - bash validate.sh
